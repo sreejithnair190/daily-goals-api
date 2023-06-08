@@ -1,4 +1,4 @@
-exports.get_users = async(req, res) => {
+exports.get_tasks = async(req, res) => {
     try {
         res.status(200).json({
             status:"success"
