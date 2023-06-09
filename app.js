@@ -9,7 +9,7 @@ const app = express()
 app.use(express.json());
 app.use(morgan('dev'));
 
-app.use('api/v1/tasks', userRoute);
-app.use('api/v1/tasks', taskRoute);
+app.use('/api/v1/user', userRoute);
+app.use('/api/v1/task', taskRoute);
 
 module.exports = app;
