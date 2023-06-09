@@ -10,7 +10,8 @@ mongoose.connect(
         useNewUrlParser:true
     }
 )
-.then(() => console.log("Database connected Successfuly"));
+.then(() => console.log("Database connected Successfuly"))
+.catch((err) => console.log("Database connection error"));
 
 const port = process.env.PORT;
 app.listen(port, () => console.log(`Server has been started on ${port}`));
