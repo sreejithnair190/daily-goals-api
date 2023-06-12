@@ -4,10 +4,14 @@ exports.catchAsynErr = (fn) => {
     }
 }
 
-exports.successMessage = (status = 200, res, message, ...data) => {
+exports.successMessage = (res, [dataObject], message = '', status = 200) => {
     res.status(status).json({
         status:'success',
-        message,
-        data
+        if (message) {
+            message
+        },
+        data:{
+            [dataObject]:dataObject
+        }
     });
 }
